@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-image: url('colordos.jpg');
+}
+
+.Formulario{
+    padding: 10px;
+margin: auto;
+margin-top: 100px;
+border-radius: 10px;
+font-family: 'calibri';
+color: rgb(255, 255, 255);
+margin-bottom: 100px;
+width: 300px;
+    background: linear-gradient( 
+    to bottom,
+    rgb(236, 25, 58),
+    rgb(251, 185, 111),
+    rgb(10, 63, 115),
+    rgb(180, 218, 170))
+
+}
+
+.Formulario h1{
+    color: black;
+margin: 0 auto 20px;
+text-align: center;
+}
+
+.espacios {
+    width: 100%;
+    padding: 4px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+    border: 0.1px solid  rgb(10, 63, 115);
+    font-family: 'calibri';
+    font-size: 25px;
+    background: linear-gradient( 
+        to bottom,
+        rgb(251, 185, 111),
+        rgb(180, 218, 170)
+        )
+    
+}
+
+label{
+    color: black;
+    font-size: 20px;
+}
+
+.espacios input[type="text"] {
+    width: 100%;
+    font-size: 20px;
+}
+
+.espacios input[type="email"] {
+    width: 100%;
+    font-size: 20px;
+}
+
+.espacios input[type="date"] {
+    width: 100%;
+    font-size: 20px;
+}
+
+.enviar {
+    background-color: rgb(246, 188, 116);
+    color:black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    border: 0.1px solid  rgb(10, 63, 115);
+}
+
+.enviar:hover {
+    background-color: rgb(237, 33, 61);
+}
