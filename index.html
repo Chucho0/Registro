@@ -4,22 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js"></script>
   </head>
   <body>
+
+    <div class="alert" id="alert">
+      <h1></h1>
+  </div>
+
+  <section>
+      <div class="for">
     <div class="Formulario">
       <h1><b>Registrarse</b></h1>
       <div class="espacios">
         <label for="minombre"><b>Nombre</b></label>
         <br />
-        <input type="text" id="minombre" />
+        <input type="text" placeholder="Digite su nombre" id="minombre" />
       </div>
       <br />
       <div class="espacios">
         <label for="miapellido"><b>Apellido</b></label>
         <br />
-        <input type="text" id="miapellido" />
+        <input type="text"  placeholder="Digite sus apellidos" id="miapellido" />
       </div>
       <br />
       <div class="espacios">
@@ -44,13 +51,13 @@
           ><b>Numero de Identificacion</b></label
         >
         <br />
-        <input type="text" id="numeroidentificacion" />
+        <input type="text" placeholder="N° de documento" id="numeroidentificacion" />
       </div>
       <br />
       <div class="espacios">
         <label for="fechadenacimiento"><b>Fecha de Nacimiento</b></label>
         <br />
-        <input type="date" id="fechadenacimiento" />
+        <input type="date" id="fecha" />
       </div>
       <br />
       <div class="espacios">
@@ -73,18 +80,19 @@
       <div class="espacios">
         <label for="numerodetelefono"><b>Numero de Telefono</b></label>
         <br />
-        <input type="text" id="numerodetelefono" />
+        <input type="text" placeholder="N° de telefono" id="numerodetelefono"" />
       </div>
       <br />
       <div class="espacios">
         <label for="correoeletronico"><b>Correo Electronico</b></label>
         <br />
-        <input type="email" id="correoeletronico" />
+        <input type="email" placeholder="Correo principal" id="correoeletronico" />
       </div>
       <br />
-      <div >
-        <input class="enviar" type="submit" onclick="enviar()" value="Enviar" />
-      </div>
+      <div>
+        <button class="enviar" onclick="validar()">Enviar</button>
+    </div>
     </div>
   </body>
 </html>
+
