@@ -37,8 +37,8 @@ function validar() {
         if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
             edad--;
         }
-        if (edad < 15) {
-            mostrarAlerta("Debe ser mayor de 15 años para registrarse.");
+        if (edad < 13) {
+            mostrarAlerta("Debe ser mayor de 13 años para registrarse.");
             return;
         }
     }
