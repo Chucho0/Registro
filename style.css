@@ -1,50 +1,46 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-image: url('colordos.jpg');
 }
 
-.Formulario{
+.Formulario {
     padding: 10px;
-margin: auto;
-margin-top: 5px;
-font-family: 'calibri';
-color: rgb(255, 255, 255);
-margin-bottom: 5px;
-width: 500px;
-    background: linear-gradient( 
-    to bottom,
-    rgb(153, 153, 153),
-    rgb(10, 10, 10),
-    rgb(237, 237, 237),)
+    margin: auto;
+    margin-top: 5px;
+    font-family: 'calibri';
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+    width: 500px;
+    background: linear-gradient(to bottom,
+            rgb(153, 153, 153),
+            rgb(10, 10, 10),
+            rgb(237, 237, 237), )
 }
 
-.Formulario h1{
-color: rgb(31, 91, 248);
-margin-bottom: 5px;
-text-align: center;
-font-size: 50px;
+.Formulario h1 {
+    color: rgb(31, 91, 248);
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 50px;
 }
 
 .espacios {
     padding: 4px;
     border-radius: 5px;
-    border: 0.5px solid  rgb(31, 91, 248);
+    border: 0.5px solid rgb(31, 91, 248);
     font-family: 'calibri';
     font-size: 15px;
-    background: linear-gradient( 
-        to bottom,
-        rgb(3, 3, 3),
-        rgb(116, 114, 114)
-        )
-    
+    background: linear-gradient(to bottom,
+            rgb(3, 3, 3),
+            rgb(116, 114, 114))
 }
 
-label{
+label {
     color: white;
     font-size: 20px;
 }
@@ -65,8 +61,8 @@ label{
 }
 
 .enviar {
-    background-color:red;
-    color:white;
+    background-color: red;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -74,18 +70,18 @@ label{
     font-weight: bold;
     font-size: 16px;
     width: 100%;
-    border: 0.1px solid  white;
+    border: 0.1px solid white;
 }
 
 .enviar:hover {
     background-color: rgb(31, 91, 248);
 }
 
-#alert{
+#alert {
     font-size: 16px;
 }
 
-.alert{
+.alert {
     position: fixed;
     bottom: 60px;
     left: 41%;
@@ -97,194 +93,256 @@ label{
     display: none;
 }
 
-.alert2{
+.alert2 {
     display: flex;
     justify-content: center;
     align-items: center;
-} 
+}
 
-@media (max-width: 2000px){
-    .alert{
+.tabla {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tavla {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.tavla th,
+.tavla td {
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: left;
+}
+
+.tavla th {
+    background-color: #222;
+    color: #ff0000;
+}
+
+.tavla tr:nth-child(even) {
+    background-color: #444;
+}
+
+@media screen and (max-width: 860px) {
+    .tavla {
+        width: auto !important;
+    }
+
+    .tabvla col {
+        width: auto !important;
+    }
+
+    .tabla {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 2000px) {
+    .alert {
         left: 39%;
         width: 22%;
     }
 }
 
-@media (max-width: 1700px){
-    .alert{
+@media (max-width: 1700px) {
+    .alert {
         left: 37.5%;
         width: 25%;
     }
 }
 
-@media (max-width: 1450px){
-    .alert{
+@media (max-width: 1450px) {
+    .alert {
         left: 34.5%;
         width: 31%;
     }
 }
 
 
-@media (max-width: 1150px){
-    .alert{
+@media (max-width: 1150px) {
+    .alert {
         left: 31.1%;
         width: 38%;
     }
 }
 
-@media (max-width: 950px){
-    .alert{
+@media (max-width: 950px) {
+    .alert {
         left: 27.3%;
         width: 45%;
     }
 }
 
-@media (max-width: 750px){
-    .alert{
+@media (max-width: 750px) {
+    .alert {
         left: 20%;
         width: 60%;
     }
 }
 
-@media (max-width: 550px){
-    .alert{
+@media (max-width: 550px) {
+    .alert {
         left: 14%;
         width: 72%;
     }
-    .Formulario{
-    width: 400px;
+
+    .Formulario {
+        width: 400px;
     }
 }
 
-@media (max-width: 400px){
-    .alert{
+@media (max-width: 400px) {
+    .alert {
         left: 17%;
         width: 65%;
     }
-    .Formulario{
-    width: 300px;
+
+    .Formulario {
+        width: 300px;
     }
 }
 
-@media (max-width: 350px){
-    .alert{
+@media (max-width: 350px) {
+    .alert {
         left: 14.5%;
         width: 72%;
     }
 }
 
-@media (max-width: 300px){
-    .alert{
+@media (max-width: 300px) {
+    .alert {
         left: 16%;
         width: 69%;
     }
-    .Formulario{
-    width: 250px;
+
+    .Formulario {
+        width: 250px;
     }
 }
 
-@media (max-width: 275px){
-    .alert{
+@media (max-width: 275px) {
+    .alert {
         left: 12.5%;
         width: 77%;
     }
 }
 
-@media (max-width: 250px){
-    .alert{
+@media (max-width: 250px) {
+    .alert {
         left: 11%;
         width: 77%;
     }
-    .Formulario{
+
+    .Formulario {
         width: 230px;
-        }
-        .Formulario h1{
-            font-size: 40px;
-            }
-            label{
-                font-size: 17px;
-            }
-::placeholder{
-    font-size: 15px;
-}
+    }
+
+    .Formulario h1 {
+        font-size: 40px;
+    }
+
+    label {
+        font-size: 17px;
+    }
+
+    ::placeholder {
+        font-size: 15px;
+    }
 }
 
-@media (max-width: 225px){
-    .alert{
+@media (max-width: 225px) {
+    .alert {
         left: 11%;
         width: 77%;
         bottom: 117px;
     }
-    .Formulario{
+
+    .Formulario {
         width: 200px;
-        }
-            label{
-                font-size: 15px;
-            }
+    }
 
+    label {
+        font-size: 15px;
+    }
 }
 
-@media (max-width: 200px){
-    .Formulario{
+@media (max-width: 200px) {
+    .Formulario {
         width: 175px;
-        }
-            label{
-                font-size: 13px;
-            }
-            .Formulario h1{
-                font-size: 30px;
-                }
-                ::placeholder{
-                    font-size: 13px;
-                }.espacios input[type="date"] {
-                    font-size: 15px;
-                }
-                .alert{
-                    left: 11%;
-                    width: 77%;
-                    bottom: 130px;
-                }
-                
+    }
 
+    label {
+        font-size: 13px;
+    }
+
+    .Formulario h1 {
+        font-size: 30px;
+    }
+
+    ::placeholder {
+        font-size: 13px;
+    }
+
+    .espacios input[type="date"] {
+        font-size: 15px;
+    }
+
+    .alert {
+        left: 11%;
+        width: 77%;
+        bottom: 130px;
+    }
 }
 
-@media (max-width: 155px){
-    .Formulario{
+@media (max-width: 155px) {
+    .Formulario {
         width: 150px;
-        }
-            label{
-                font-size: 10px;
-            }
-                ::placeholder{
-                    font-size: 10px;
-                }.espacios input[type="date"] {
-                    font-size: 10px;
-                }
-                .alert{
-                    left: 11%;
-                    width: 77%;
-                    bottom: 137px;
-                }
-                
+    }
 
+    label {
+        font-size: 10px;
+    }
+
+    ::placeholder {
+        font-size: 10px;
+    }
+
+    .espacios input[type="date"] {
+        font-size: 10px;
+    }
+
+    .alert {
+        left: 11%;
+        width: 77%;
+        bottom: 137px;
+    }
 }
 
-@media (max-width: 125px){
-    .Formulario{
+@media (max-width: 125px) {
+    .Formulario {
         width: 125px;
-        }
-            label{
-                font-size: 8px;
-            }
-                ::placeholder{
-                    font-size: 10px;
+    }
 
-                }
-                .alert{
-                    left: 9%;
-                    width: 67%;
-                    bottom: 290px;
-                }
-                
+    label {
+        font-size: 8px;
+    }
 
+    ::placeholder {
+        font-size: 10px;
+
+    }
+
+    .alert {
+        left: 9%;
+        width: 67%;
+        bottom: 290px;
+    }
 }
