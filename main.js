@@ -1,15 +1,50 @@
 let informacion = [];
+let op = null
+let indice = null
 function validar() {
     let nombre = document.getElementById("minombre").value;
     let apellido = document.getElementById("miapellido").value;
     let tipoDocumento = document.querySelector('input[name="identificacion"]:checked');
-    // let tipoDocumento = tipoDocumentoElement ? tipoDocumentoElement.value : null;
     let numeroDocumento = document.getElementById("numeroidentificacion").value;
     let genero = document.querySelector('input[name="genero"]:checked');
-    // let genero = generoElement ? generoElement.value : null;
     let fecha = document.getElementById("fecha").value;
     let telefono = document.getElementById("numerodetelefono").value;
     let correo = document.getElementById("correoeletronico").value;
+
+    if (op === true) {
+        informacion[indice].nombre = document.getElementById("minombre").value
+        informacion[indice].apellido = document.getElementById("miapellido").value
+        informacion[indice].tipoDoc = document.querySelector('input[name="identificacion"][value="' + r.tipoDoc + '"]').checked = true;
+        informacion[indice].numeroDocumento = document.getElementById("numeroidentificacion").value
+        informacion[indice].gen = document.querySelector('input[name="genero"][value="' + r.gen + '"]').checked = true;
+        informacion[indice].fechaNacimiento = document.getElementById("fecha").value
+        informacion[indice].telefono = document.getElementById("numerodetelefono").value
+        informacion[indice].correo = document.getElementById("correoeletronico").value
+    } else {
+        let identificaciontext = tipoDocumento.value
+        let generotext = genero.value
+        let persona = {
+            nombre: nombre,
+            apellido: apellido,
+            tipoDoc: identificaciontext,
+            numeroDocumento: numeroDocumento,
+            gen: generotext,
+            fechaNacimiento: fecha,
+            telefono: telefono,
+            correo: correo,
+        };
+        informacion.push(persona);
+        document.getElementById("minombre").value = "";
+        document.getElementById("miapellido").value = "";
+        document.querySelector('input[name="identificacion"]:checked').checked = false
+        document.getElementById("numeroidentificacion").value = "";
+        document.querySelector('input[name="genero"]:checked').checked = false
+        document.getElementById("fecha").value = "";
+        document.getElementById("numerodetelefono").value = "";
+        document.getElementById("correoeletronico").value = "";
+        document.getElementById("tabla").innerHTML = ""
+    }
+
     if (nombre === "") {
         mostrarAlerta("Ingrese su nombre");
         return;
@@ -63,31 +98,9 @@ function validar() {
             return;
         }
     }
-    let identificaciontext = tipoDocumento.value
-    let generotext = genero.value
-    let persona = {
-        nombre: nombre,
-        apellido: apellido,
-        tipoDoc: identificaciontext,
-        numeroDocumento: numeroDocumento,
-        gen: generotext,
-        fechaNacimiento: fecha,
-        telefono: telefono,
-        correo: correo,
-    };
-    informacion.push(persona);
-    document.getElementById("minombre").value = "";
-    document.getElementById("miapellido").value = "";
-    document.querySelector('input[name="identificacion"]:checked').checked = false
-    // if (tipoDocumentoElement) tipoDocumentoElement.checked = false;
-    document.getElementById("numeroidentificacion").value = "";
-    document.querySelector('input[name="genero"]:checked').checked = false
-    // if (generoElement) generoElement.checked = false;
-    document.getElementById("fecha").value = "";
-    document.getElementById("numerodetelefono").value = "";
-    document.getElementById("correoeletronico").value = "";
-    document.getElementById("tabla").innerHTML = ""
+
     pintar()
+    op = false
 }
 function mostrarAlerta(mensaje) {
     let alerta = document.getElementById("alert");
@@ -117,6 +130,9 @@ function pintar() {
         let editar = document.createElement("button")
         let eliminar = document.createElement("button")
         editar.textContent = "📝"
+        editar.addEventListener("click", () => {
+            edita(item, index)
+        })
         eliminar.textContent = "❌"
         td1.textContent = item.nombre
         td2.textContent = item.apellido
@@ -140,4 +156,18 @@ function pintar() {
         frag.appendChild(tr)
         document.getElementById("tabla").appendChild(frag)
     })
+}
+
+function edita(r, i) {
+    indice = i
+    op = true
+    console.log(r);
+    document.getElementById("minombre").value = r.nombre;
+    document.getElementById("miapellido").value = r.apellido;
+    document.querySelector('input[name="identificacion"][value="' + r.tipoDoc + '"]').checked = true;
+    document.getElementById("numeroidentificacion").value = r.numeroDocumento;
+    document.querySelector('input[name="genero"][value="' + r.gen + '"]').checked = true;
+    document.getElementById("fecha").value = r.fechaNacimiento;
+    document.getElementById("numerodetelefono").value = r.telefono;
+    document.getElementById("correoeletronico").value = r.correo;
 }
