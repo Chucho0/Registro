@@ -40,6 +40,19 @@ body {
             rgb(116, 114, 114))
 }
 
+.lista {
+    width: 100%;
+    font-size: 18px;
+}
+
+::placeholder {
+    color: #222;
+}
+
+label {
+    font-size: 20px;
+}
+
 label {
     color: white;
     font-size: 20px;
@@ -208,12 +221,21 @@ label {
     .Formulario {
         width: 300px;
     }
+
+    .lista{
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 350px) {
     .alert {
         left: 14.5%;
         width: 72%;
+    }
+
+    * {
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
 
@@ -225,6 +247,10 @@ label {
 
     .Formulario {
         width: 250px;
+    }
+
+    .lista{
+        font-size: 13px;
     }
 }
 
@@ -255,6 +281,10 @@ label {
 
     ::placeholder {
         font-size: 15px;
+    }
+
+    .lista{
+        font-size: 10px;
     }
 }
 

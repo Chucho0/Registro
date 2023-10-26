@@ -5,7 +5,7 @@ let indice = null;
 function validar() {
   let nombre = document.getElementById("minombre").value;
   let apellido = document.getElementById("miapellido").value;
-  let tipoDocumento = document.querySelector('input[name="identificacion"]:checked');
+  let tipoDocumento = document.getElementById("identificacion").value;
   let numeroDocumento = document.getElementById("numeroidentificacion").value;
   let genero = document.querySelector('input[name="genero"]:checked');
   let fecha = document.getElementById("fecha").value;
