@@ -6,6 +6,9 @@
 
 body {
     background-image: url('colordos.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .Formulario {
@@ -222,7 +225,7 @@ label {
         width: 300px;
     }
 
-    .lista{
+    .lista {
         font-size: 16px;
     }
 }
@@ -249,7 +252,7 @@ label {
         width: 250px;
     }
 
-    .lista{
+    .lista {
         font-size: 13px;
     }
 }
@@ -283,7 +286,7 @@ label {
         font-size: 15px;
     }
 
-    .lista{
+    .lista {
         font-size: 10px;
     }
 }
